@@ -26,23 +26,27 @@
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
+      <li class="list-group-item">Item 5</li>
+      <li class="list-group-item">Item 6</li>
+      <li class="list-group-item">Item 7</li>
     </ul>
    </div>
   </div>
 
   <script>
-        
-        const ded= document.getElementById('header-title');
-        ded.style.border = "3px solid black";
+        var ele = document.querySelector('.list-group-item:nth-child(2)');
+        ele.style.background = "red";
+        var lel =document.querySelector('.list-group-item:nth-child(3)');
+        lel.style.display =" none";
 
-        const bold = document.getElementById('mytitle');
-        bold.style.fontWeight= "bold";
-        bold.style.color ="green";
+       var sec = document.querySelectorAll('.list-group-item');
+        sec[1].style.color="green";
         
-        const vat = document.getElementById('items');
-        vat.firstElementChild.textContent="My Text";
-        vat.firstElementChild.style.fontWeight="bold";
-    
+        var odd = document.querySelectorAll('li:nth-child(odd)');
+        for( var i=0;i<odd.length;i++){
+          odd[i].style.background ="green";
+        }
+        
   </script>
 
 </body>
